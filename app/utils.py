@@ -8,7 +8,6 @@ import random
 import string
 from urllib.parse import urlparse
 
-
 def generate_short_code(length: int = 6) -> str:
     """
     Generates a random alphanumeric code of the given length.
@@ -16,10 +15,9 @@ def generate_short_code(length: int = 6) -> str:
     chars = string.ascii_letters + string.digits
     return ''.join(random.choices(chars, k=length))
 
-
 def is_valid_url(url: str) -> bool:
     """
-    Validates that the URL has a valid scheme and network location.
+    Returns True if URL has scheme http/https and a network location.
     """
     try:
         result = urlparse(url)
@@ -27,10 +25,9 @@ def is_valid_url(url: str) -> bool:
     except Exception:
         return False
 
-
 def build_short_url(code: str) -> str:
     """
-    Builds the absolute short URL using the current request host.
+    Constructs the public short URL using the current request host.
     """
     from flask import request
     return request.host_url.rstrip('/') + '/' + code
