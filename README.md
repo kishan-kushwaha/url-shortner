@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-# url-shortner
+
+
 =======
 # URL Shortener Service
 
@@ -168,4 +168,4 @@ If you have questions about the requirements, please email [anand@retainsure.com
 ---
 
 Good luck! We're excited to see your solution.
->>>>>>> a75d64e (inital commit)
+
